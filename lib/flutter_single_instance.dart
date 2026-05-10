@@ -198,8 +198,9 @@ abstract class FlutterSingleInstance {
 
     // Try to lock the file, if it fails, another instance is running.
     try {
-      final locker =
-          await File(pidFile.path + ".lock").open(mode: FileMode.write);
+      final file = File(pidFile.path + ".lock");
+      await file.create(recursive: true);
+      final locker = await file.open(mode: FileMode.write);
       _locker = await locker.lock();
     } catch (_) {}
 
