@@ -18,4 +18,15 @@ class Instance with _$Instance {
   /// Creates an instance from a json map.
   factory Instance.fromJson(Map<String, dynamic> json) =>
       _$InstanceFromJson(json);
+
+  @override
+  int get pid => pid;
+
+  @override
+  int get port => port;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return {'port': port, 'pid': pid};
+  }
 }

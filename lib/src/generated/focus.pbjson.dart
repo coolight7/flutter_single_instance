@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: focus.proto
-//
-// @dart = 2.12
+// Generated from focus.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -40,22 +42,3 @@ const FocusResponse$json = {
 final $typed_data.Uint8List focusResponseDescriptor = $convert.base64Decode(
     'Cg1Gb2N1c1Jlc3BvbnNlEhgKB3N1Y2Nlc3MYASABKAhSB3N1Y2Nlc3MSFAoFZXJyb3IYAiABKA'
     'lSBWVycm9y');
-
-const $core.Map<$core.String, $core.dynamic> FocusServiceBase$json = {
-  '1': 'FocusService',
-  '2': [
-    {'1': 'Focus', '2': '.flutter_single_instance.FocusRequest', '3': '.flutter_single_instance.FocusResponse', '4': {}},
-  ],
-};
-
-@$core.Deprecated('Use focusServiceDescriptor instead')
-const $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> FocusServiceBase$messageJson = {
-  '.flutter_single_instance.FocusRequest': FocusRequest$json,
-  '.flutter_single_instance.FocusResponse': FocusResponse$json,
-};
-
-/// Descriptor for `FocusService`. Decode as a `google.protobuf.ServiceDescriptorProto`.
-final $typed_data.Uint8List focusServiceDescriptor = $convert.base64Decode(
-    'CgxGb2N1c1NlcnZpY2USWAoFRm9jdXMSJS5mbHV0dGVyX3NpbmdsZV9pbnN0YW5jZS5Gb2N1c1'
-    'JlcXVlc3QaJi5mbHV0dGVyX3NpbmdsZV9pbnN0YW5jZS5Gb2N1c1Jlc3BvbnNlIgA=');
-

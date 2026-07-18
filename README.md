@@ -24,6 +24,13 @@ Add `flutter_single_instance` as a dependency in your `pubspec.yaml` file.
 flutter pub add flutter_single_instance
 ```
 
+### update grpc generated code
+```sh
+dart pub global activate protoc_plugin
+set PATH=/path/to/protoc-gen-dart dir (pub cache/bin);%PATH%
+path/to/protoc --dart_out="grpc:lib/src/generated" -I protos focus.proto
+```
+
 ### MacOS
 
 Disable sandboxing and enable networking in `macos/Runner/DebugProfile.entitlements` and `macos/Runner/Release.entitlements` files.

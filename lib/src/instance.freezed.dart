@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -11,117 +11,241 @@ part of 'instance.dart';
 
 T _$identity<T>(T value) => value;
 
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-Instance _$InstanceFromJson(Map<String, dynamic> json) {
-  return _Instance.fromJson(json);
-}
-
 /// @nodoc
 mixin _$Instance {
   /// The port of the grpc server.
-  int get port => throw _privateConstructorUsedError;
+  int get port;
 
   /// The process id of the instance.
-  int get pid => throw _privateConstructorUsedError;
-
-  /// Serializes this Instance to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  int get pid;
 
   /// Create a copy of Instance
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $InstanceCopyWith<Instance> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $InstanceCopyWith<$Res> {
-  factory $InstanceCopyWith(Instance value, $Res Function(Instance) then) =
-      _$InstanceCopyWithImpl<$Res, Instance>;
-  @useResult
-  $Res call({int port, int pid});
-}
-
-/// @nodoc
-class _$InstanceCopyWithImpl<$Res, $Val extends Instance>
-    implements $InstanceCopyWith<$Res> {
-  _$InstanceCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of Instance
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
+  $InstanceCopyWith<Instance> get copyWith =>
+      _$InstanceCopyWithImpl<Instance>(this as Instance, _$identity);
+
+  /// Serializes this Instance to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? port = null,
-    Object? pid = null,
-  }) {
-    return _then(_value.copyWith(
-      port: null == port
-          ? _value.port
-          : port // ignore: cast_nullable_to_non_nullable
-              as int,
-      pid: null == pid
-          ? _value.pid
-          : pid // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Instance &&
+            (identical(other.port, port) || other.port == port) &&
+            (identical(other.pid, pid) || other.pid == pid));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, port, pid);
+
+  @override
+  String toString() {
+    return 'Instance(port: $port, pid: $pid)';
   }
 }
 
 /// @nodoc
-abstract class _$$InstanceImplCopyWith<$Res>
-    implements $InstanceCopyWith<$Res> {
-  factory _$$InstanceImplCopyWith(
-          _$InstanceImpl value, $Res Function(_$InstanceImpl) then) =
-      __$$InstanceImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $InstanceCopyWith<$Res> {
+  factory $InstanceCopyWith(Instance value, $Res Function(Instance) _then) =
+      _$InstanceCopyWithImpl;
   @useResult
   $Res call({int port, int pid});
 }
 
 /// @nodoc
-class __$$InstanceImplCopyWithImpl<$Res>
-    extends _$InstanceCopyWithImpl<$Res, _$InstanceImpl>
-    implements _$$InstanceImplCopyWith<$Res> {
-  __$$InstanceImplCopyWithImpl(
-      _$InstanceImpl _value, $Res Function(_$InstanceImpl) _then)
-      : super(_value, _then);
+class _$InstanceCopyWithImpl<$Res> implements $InstanceCopyWith<$Res> {
+  _$InstanceCopyWithImpl(this._self, this._then);
+
+  final Instance _self;
+  final $Res Function(Instance) _then;
 
   /// Create a copy of Instance
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? port = null,
-    Object? pid = null,
+  $Res call({Object? port = null, Object? pid = null}) {
+    return _then(
+      _self.copyWith(
+        port: null == port
+            ? _self.port
+            : port // ignore: cast_nullable_to_non_nullable
+                  as int,
+        pid: null == pid
+            ? _self.pid
+            : pid // ignore: cast_nullable_to_non_nullable
+                  as int,
+      ),
+    );
+  }
+}
+
+/// Adds pattern-matching-related methods to [Instance].
+extension InstancePatterns on Instance {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_Instance value)? $default, {
+    required TResult orElse(),
   }) {
-    return _then(_$InstanceImpl(
-      port: null == port
-          ? _value.port
-          : port // ignore: cast_nullable_to_non_nullable
-              as int,
-      pid: null == pid
-          ? _value.pid
-          : pid // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
+    final _that = this;
+    switch (_that) {
+      case _Instance() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_Instance value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Instance():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_Instance value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Instance() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(int port, int pid)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Instance() when $default != null:
+        return $default(_that.port, _that.pid);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(int port, int pid) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Instance():
+        return $default(_that.port, _that.pid);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(int port, int pid)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Instance() when $default != null:
+        return $default(_that.port, _that.pid);
+      case _:
+        return null;
+    }
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$InstanceImpl implements _Instance {
-  _$InstanceImpl({required this.port, required this.pid});
-
-  factory _$InstanceImpl.fromJson(Map<String, dynamic> json) =>
-      _$$InstanceImplFromJson(json);
+class _Instance implements Instance {
+  _Instance({required this.port, required this.pid});
+  factory _Instance.fromJson(Map<String, dynamic> json) =>
+      _$InstanceFromJson(json);
 
   /// The port of the grpc server.
   @override
@@ -131,16 +255,24 @@ class _$InstanceImpl implements _Instance {
   @override
   final int pid;
 
+  /// Create a copy of Instance
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'Instance(port: $port, pid: $pid)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$InstanceCopyWith<_Instance> get copyWith =>
+      __$InstanceCopyWithImpl<_Instance>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$InstanceToJson(this);
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$InstanceImpl &&
+            other is _Instance &&
             (identical(other.port, port) || other.port == port) &&
             (identical(other.pid, pid) || other.pid == pid));
   }
@@ -149,41 +281,45 @@ class _$InstanceImpl implements _Instance {
   @override
   int get hashCode => Object.hash(runtimeType, port, pid);
 
-  /// Create a copy of Instance
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  @pragma('vm:prefer-inline')
-  _$$InstanceImplCopyWith<_$InstanceImpl> get copyWith =>
-      __$$InstanceImplCopyWithImpl<_$InstanceImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$InstanceImplToJson(
-      this,
-    );
+  String toString() {
+    return 'Instance(port: $port, pid: $pid)';
   }
 }
 
-abstract class _Instance implements Instance {
-  factory _Instance({required final int port, required final int pid}) =
-      _$InstanceImpl;
-
-  factory _Instance.fromJson(Map<String, dynamic> json) =
-      _$InstanceImpl.fromJson;
-
-  /// The port of the grpc server.
+/// @nodoc
+abstract mixin class _$InstanceCopyWith<$Res>
+    implements $InstanceCopyWith<$Res> {
+  factory _$InstanceCopyWith(_Instance value, $Res Function(_Instance) _then) =
+      __$InstanceCopyWithImpl;
   @override
-  int get port;
+  @useResult
+  $Res call({int port, int pid});
+}
 
-  /// The process id of the instance.
-  @override
-  int get pid;
+/// @nodoc
+class __$InstanceCopyWithImpl<$Res> implements _$InstanceCopyWith<$Res> {
+  __$InstanceCopyWithImpl(this._self, this._then);
+
+  final _Instance _self;
+  final $Res Function(_Instance) _then;
 
   /// Create a copy of Instance
   /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$InstanceImplCopyWith<_$InstanceImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  @pragma('vm:prefer-inline')
+  $Res call({Object? port = null, Object? pid = null}) {
+    return _then(
+      _Instance(
+        port: null == port
+            ? _self.port
+            : port // ignore: cast_nullable_to_non_nullable
+                  as int,
+        pid: null == pid
+            ? _self.pid
+            : pid // ignore: cast_nullable_to_non_nullable
+                  as int,
+      ),
+    );
+  }
 }
